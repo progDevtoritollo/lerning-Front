@@ -1,0 +1,39 @@
+.wrapper{
+    position: absolute;
+    border: 3px solid black;
+    width:170px;
+    height: 150px;
+    top:50px;
+    left: 30px;
+}
+.tu{
+    position: absolute;
+    top: 15px;
+    left: 59px;
+    width: 0;
+    height: 0;
+    /* border: 5px solid black; */
+	border-left: 18px solid transparent;
+	border-right: 18px solid transparent;
+	border-bottom: 25px solid rgb(77, 119, 79);
+}
+.tm{
+    position: absolute;
+    top: 40px;
+    left: 48px;
+    width: 0;
+	height: 0;
+	border-left: 30px solid transparent;
+	border-right: 30px solid transparent;
+	border-bottom: 40px solid rgb(77, 119, 79);
+}
+.tl{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 55px solid rgb(77, 119, 79);
+}
