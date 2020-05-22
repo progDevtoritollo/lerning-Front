@@ -14,7 +14,7 @@ const obj = {
     bool: true,
     what:null,
     when:undefined,
-    Say:"MEW",
+    Say:"MEW"
 }
 
 const { num ,min } = obj;
