@@ -3,11 +3,104 @@ body {
   margin: 0;
   height: 100%;
   width: 100%;
-  background-color:silver;
+  background-image: url(./images/green.jpg);
+  color: #ffffff;
+  font-family: Raleway, sans-serif;
 }
-.logo{
+
+.header {
   display: flex;
+  justify-content: space-between;
+  width: 98%;
+  min-width: 1140px;
   position: absolute;
-  top: 3px;
-  left: 3px;
+  margin: 20px;
+}
+
+.content {
+  position: absolute;
+  top: 150px;
+  left: 15px;
+}
+
+.sidebar {
+  position: absolute;
+  right: 10px;
+  top:285px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.logo__point {
+  font-weight: 900;
+  color: #00ff00;
+}
+
+img {
+  padding:5px;
+  text-decoration: none;
+  max-width: 35%;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+.menu {
+  text-transform: uppercase;
+  color: #00ff00;
+  font-size: 15px;
+  position: relative;
+  right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.text {
+  position: relative;
+  top: 100px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.text-up-title {
+  text-transform: uppercase;
+  color: grey;
+  font-weight: 500;
+}
+
+.text-low-title {
+  font-size: 48px;
+  margin-top: 15px;
+}
+
+.buttons {
+  text-transform: uppercase;
+  background: transparent;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.buttons__start {
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  margin-right: 20px;
+}
+
+.buttons__more {
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
 }
