@@ -41,8 +41,8 @@ const mul =(a,b) => a*b;
 const div =(a,b) => a/b;
 
 const hof = (fn, a, b)   =>  {
-    console.log(fn(a,b));
-    return true;
+  console.log(fn(a,b));
+  return true;
 }
 
 hof(sum, 4, 20);
@@ -56,7 +56,7 @@ const arr = [1, 2, 3, 4, 5, {hello: "world"}];
 const f = arr.reduce((acc,val) => {
 
     if (typeof val ==="number"){
-        return [...acc, val];
+      return [...acc, val];
     }
     return[...acc];
 },[]);
@@ -77,3 +77,35 @@ console.log(changeArr);
 
 //5
 
+const resetButon = document.getElementById("reset");
+const startButon = document.getElementById("start");
+
+const containerEl = document.getElementById("container");
+
+let timer;
+let interval;
+let timerCounter = 0;
+let intervalCounter = 0;
+
+resetButon.addEventListener("click",() =>{
+  const reset = document.getAttribute("data", "del");
+  reset.remove();
+});
+startButon.addEventListener("click",()=>{
+  timer = setTimeout(()=>{
+    console.log("Runed timeout");
+    const div = document.createElement("div");
+    div.setAttribute("data", "del");
+    div.append("Timer" + timerCounter);
+    containerEl.append(div);
+    timerCounter++;
+  },5000);
+  interval = setInterval(() => {
+    console.log("Runned interval");
+    const div = document.createElement("div");
+    div.setAttribute("data", "del");
+    div.append("Interval" + intervalCounter);
+    containerEl.append(div);
+    intervalCounter++;
+  }, 4000);
+})
