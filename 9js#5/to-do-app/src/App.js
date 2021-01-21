@@ -1,20 +1,32 @@
+import React, { useState } from "react";
+
 import "./App.css";
+import { Task } from "./Task";
 
 function App() {
+  const [task, setTask] = useState("");
+
+  const handleOnChange = (e) => {
+    setTask(e.target.value);
+  };
+
   return (
     <div className="App">
       <header className="todo_header">
-        <div className="del">My ToDo APP</div>
+        <p> My ToDo App</p>
+        <label className="input">
+          Input task
+          <input
+            onChange={handleOnChange}
+            placeholder="input me"
+            type="text"
+            size="50"
+          ></input>
+          <button>Add</button>
+        </label>
       </header>
-      <div className="input">
-        <input type="text" size="40"></input>
-      </div>
       <div className="todo_body">
-        <div className="item">
-          <input type="checkbox" checked="checked" />
-          <label>Added task</label>
-          <button>Del</button>
-        </div>
+        <Task task={task} />
       </div>
     </div>
   );

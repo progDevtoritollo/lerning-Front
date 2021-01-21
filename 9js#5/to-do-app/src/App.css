@@ -1,21 +1,31 @@
 .App {
-  text-align: center;
-  color: #61dafb;
-  border: 10px solid;
-  border-color: red;
-  border-width: 5px;
-}
-
-.todo_header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  border-bottom: brown;
+
+  color: #61dafb;
+  border: 5px solid;
+  border-color: #61dafb;
+  margin: 40px;
+  padding: 15px;
 }
 
-.del {
-  border-color: blue;
-  border-radius: 10%;
+.todo_header {
+  margin-bottom: 25px;
+  font-size: calc(10px + 2vmin);
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  margin: 2px;
+}
+
+.input {
+  color: aqua;
+  margin: 10px;
+  font-size: small;
+}
+input {
+  margin: 10px;
 }
