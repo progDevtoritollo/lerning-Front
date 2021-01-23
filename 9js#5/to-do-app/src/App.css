@@ -29,3 +29,20 @@ p {
 input {
   margin: 10px;
 }
+
+.todo {
+  display: flex;
+  height: 15px;
+  /* width: auto; */
+  align-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+span {
+  margin-right: 10px;
+}
+
+.todo_text-done {
+  text-decoration: line-through;
+}

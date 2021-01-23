@@ -1,9 +1,9 @@
 import "../App.css";
 
-function Task(prop) {
+function Task({ task }) {
   return (
     <div>
-      <div>{prop.task}</div>
+      <div>{task}</div>
       {/* <input type="checkbox" checked="checked" /> */}
       <label>Added task</label>
       <button>Del</button>

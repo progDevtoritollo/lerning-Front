@@ -1,15 +1,30 @@
 import React, { useState } from "react";
 
 import "./App.css";
-import { Task } from "./Task";
+// import { Task } from "./Task/Task.js";
 
 function App() {
-  const [task, setTask] = useState("");
+  const [todos, setTodos] = useState([]);
+  const [todoText, setTodoText] = useState("");
 
-  const handleOnChange = (e) => {
-    setTask(e.target.value);
+  const handleOnChangeInput = ({ target }) => {
+    setTodoText(target.value);
   };
 
+  const handleAddTodo = () => {
+    setTodos([...todos, { text: todoText, done: false }]);
+    setTodoText("");
+  };
+
+  const handleTodoDone = (i) => {
+    const todoWhitoutDuplicate = todos.filter((val, index) => index !== i); //разобраться
+    // а что собственно фильтруем?
+
+    setTodos([
+      ...todoWhitoutDuplicate,
+      { text: todos[i].text, done: !todos[i].done },
+    ]);
+  };
   return (
     <div className="App">
       <header className="todo_header">
@@ -17,16 +32,31 @@ function App() {
         <label className="input">
           Input task
           <input
-            onChange={handleOnChange}
+            onChange={handleOnChangeInput}
             placeholder="input me"
             type="text"
             size="50"
           ></input>
-          <button>Add</button>
+          <button onClick={handleAddTodo}>Add</button>
         </label>
       </header>
-      <div className="todo_body">
-        <Task task={task} />
+      <div className="todo-block">
+        {todos.map((todo, index) => {
+          return (
+            <div className="todo">
+              <button
+                onClick={() => {
+                  handleTodoDone(index);
+                }}
+              >
+                Done
+              </button>
+              <span className={todo.done ? "todo_text-done" : ""}>
+                {todo.text}
+              </span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
